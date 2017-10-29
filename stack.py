@@ -1,4 +1,4 @@
-#简单的堆栈实现
+#简单的栈实现
 #往head添加新元素
 
 
@@ -27,6 +27,7 @@ class Stack():
     #取出元素
     def pop(self):
         node = self.head.next
+        print(node.next)
         # 找到第一个元素， 该元素 next 属性为 None,
         if not self.is_empty():
             self.head.next = node.next
@@ -44,11 +45,12 @@ def test():
     s.push(3)
     s.push(4)
 
-    print(s.top())
     print(s.pop())
     print(s.pop())
     print(s.pop())
     print(s.pop())
 
+
 if __name__ == '__main__':
     test()
+
